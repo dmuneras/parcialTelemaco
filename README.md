@@ -6,8 +6,8 @@ DANIEL MUNERA SANCHEZ
 
 El parcial consistio de dos aplicaciones:
 
-==> El integrador => RAILS APPLICATION
-==> Worker => RAILS APPLICATION
+* El integrador : RAILS APPLICATION
+* Worker : RAILS APPLICATION
 
 LIBRERIAS UTILIZADAS
 ====================
@@ -60,7 +60,7 @@ WORKERS
 
 El archivo de configuracion de los workers esta en la carpeta config y es de la forma
 
-<code>
+
 	worker: 
 	    docs:
 	        reto1:
@@ -76,7 +76,7 @@ El archivo de configuracion de los workers esta en la carpeta config y es de la 
 	                hola: '20'
 	                los: '15'
 	
-</code>
+
 
 Alli se subscriben los archivos que estan en el servidor. NOTA: es una simulacion pero se pueden mostrar los archivos porque
 fueron ubicados den la carpeta public/datos
@@ -102,20 +102,13 @@ Finalmente ejecute el siguiente comando para iniciar el worker:
 <code>rails s -p < el puerto por donde se va a escuchar >
 
 
-Los workers estan configurados en la aplicacion **Integrador** con los siguientes puertos  el la carpeta config/
+Los workers estan configurados en la aplicacion **Integrador**  en la carpeta config/ encontrara un archivo llamado
+workers.xml. Si desea iniciar los workers en otros puertos debe actualizar el archivo. Sino, solamente ingrese a la 
+carpeta de workers y ejecute
 
-<code>
-<?xml version='1.0'>
-<servidores>
-<servidor>http://localhost:2022/searchWS</servidor>
-<servidor>http://localhost:2020/searchWS</servidor>
-<servidor>http://localhost:8082/searchWS</servidor>
-</servidores>
-</code>
+<code> rails s -p 2022
 
-Si desea iniciar los workers en otros puertos debe actualizar el archivo.
-
-
+si desea ejecutar mas, ingrese a la carpeta worker1 por terminal y ejecute el mismo comando con otro numero de puerto
 
 
 
