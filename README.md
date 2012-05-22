@@ -29,7 +29,11 @@ de los mismos archivos.
 
 La respuesta de los workers es en formato JSON:
 
-**{"info":{"url":URL del servidor que responde ,"info": "informacion de los documentos que fueron encontrados"}}**
+```json
+{"info":{"url":URL del servidor que respondio ,
+	"info": {:doc => nombre del archivo sin extension , :times => cuantas veces esta la palabra buscada,
+	"name" => nombre del archivo, con definicion de formato para mostrarlo}}}
+```
 
 2. Para ejecutar
 -----------------
@@ -45,15 +49,23 @@ Finalmente ejecute el siguiente comando para iniciar el servidor:
 <code>rails s
 
 Y desde su navegador vaya a la direccion **http://localhost:3000** 
-	
-	
+
+NOTA: Para el problema del servidor donde tenia un problema con la gema execjs simplemente descomente en el 
+Gemfile la gema
+
+```ruby
+	# See https://github.com/sstephenson/execjs#readme for more supported runtimes
+  	# gem 'therubyracer', :platform => :ruby	
+```	
+
 WORKERS
 =======
 
 1. Datos generales
 -------------------
 
-El archivo de configuracion de los workers esta en la carpeta config y es de la forma
+El archivo de configuracion de los workers esta en la carpeta config y el archivo se llama **worker.yml** y es
+de la forma
 
 
 	worker: 
@@ -73,8 +85,8 @@ El archivo de configuracion de los workers esta en la carpeta config y es de la 
 	
 
 
-Alli se subscriben los archivos que estan en el servidor. NOTA: es una simulacion pero se pueden mostrar los archivos porque
-fueron ubicados den la carpeta public/datos
+Alli se subscriben los archivos que estan en el servidor. NOTA: es una simulacion pero se pueden mostrar los archivos
+porque fueron ubicados den la carpeta **public/datos**
 
 
 
@@ -90,7 +102,9 @@ Para correr la aplicación y en caso de haber un problema lo repotara.
 	
 Finalmente ejecute el siguiente comando para iniciar el worker:
 
-<code>rails s -p < el puerto por donde se va a escuchar >
+```ruby
+rails s -p < el puerto por donde se va a escuchar >
+```
 
 
 Los workers estan configurados en la aplicacion **Integrador**  en la carpeta config/ encontrara un archivo llamado
