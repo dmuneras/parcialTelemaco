@@ -107,11 +107,11 @@ workers.xml.
 
 
 Si desea iniciar los workers en otros puertos debe actualizar el archivo. Sino, solamente ingrese a la 
-carpeta de workers y ejecute
+carpeta de workers y el siguiente comando
 
-<code> rails s -p 2022
-<code> rails s -p 2020
-<code> rails s -p 8082
+```ruby
+rails s -p 2022
+```
 
 
 
