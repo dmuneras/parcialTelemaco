@@ -96,13 +96,14 @@ Finalmente ejecute el siguiente comando para iniciar el worker:
 Los workers estan configurados en la aplicacion **Integrador**  en la carpeta config/ encontrara un archivo llamado
 workers.xml.
 <blockquote>
+```json
 <xml version='1.0'>
 <servidores>
 <servidor>http://localhost:2022/searchWS</servidor>
 <servidor>http://localhost:2020/searchWS</servidor>
 <servidor>http://localhost:8082/searchWS</servidor>
 </servidores>
-</blockquote>
+```
 
 
 Si desea iniciar los workers en otros puertos debe actualizar el archivo. Sino, solamente ingrese a la 
