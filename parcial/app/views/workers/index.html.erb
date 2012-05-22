@@ -1,0 +1,13 @@
+<center>
+<h1> Integrador</h1>
+
+<div id = "search">
+	<p>Ingrese la palabra o frase que desea buscar: </p>
+	<%= form_tag '/search', remote: true do %>
+	<%= search_field_tag :word %>
+	<%= submit_tag "Buscar" %>
+	<% end %>
+</div>
+
+<div id = "result"></div>
+</center>

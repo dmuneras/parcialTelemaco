@@ -1,0 +1,9 @@
+one:
+  word: MyString
+  worker_id: 1
+  document_id: 1
+
+two:
+  word: MyString
+  worker_id: 1
+  document_id: 1

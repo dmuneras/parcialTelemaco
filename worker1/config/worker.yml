@@ -1,0 +1,15 @@
+worker: 
+    docs:
+        reto1:
+            name: 'reto1.pdf'            
+            dic:
+                palabra: '10'
+                el: '50'
+                buenas: '50'
+                hola: '50'
+        reto2:
+            name: 'reto2.pdf'
+            dic:
+                hola: '20'
+                los: '15'
+            

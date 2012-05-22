@@ -1,0 +1,13 @@
+$('div#result').html("");
+$('div#result').append("<h2>Resultados servidor <%=  @server %></h2>");
+<% if @result["info"]["info"].size == 0 %>
+	$('div#result').append("<strong>No hay datos disponibles</strong>");
+<% else %>
+	<% for result in @result["info"]["info"] %>
+		$('div#result').append("<div>" +
+						"El archivo es <strong><%= result['doc']%></strong>"+
+						" y la palabra se repite <strong><%= result['times']%></strong>"+
+						"<a href = '<%= @server.to_s + 'datos/' + result['name'] %>' target= '_blank'>Ver</a></div>");
+	<% end %>
+
+<% end %>

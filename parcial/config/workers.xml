@@ -1,0 +1,6 @@
+<?xml version='1.0'>
+<servidores>
+<servidor>http://localhost:2022/searchWS</servidor>
+<servidor>http://localhost:2020/searchWS</servidor>
+<servidor>http://localhost:8082/searchWS</servidor>
+</servidores>
