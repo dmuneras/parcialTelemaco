@@ -39,11 +39,6 @@ Ingresar a la carpeta parcial y ejecutar para instalar todos los requerimientos.
 
 Para correr la aplicación y en caso de haber un problema lo repotara.
 
-Luego ejecutar el comando para crear la base de datos:
-
-<code>rake db:migrate<code> 
-	
-
 	
 Finalmente ejecute el siguiente comando para iniciar el servidor:
 
@@ -86,15 +81,11 @@ fueron ubicados den la carpeta public/datos
 2. Para ejecutar
 -----------------
 
-Ingresar a la carpeta parcial y ejecutar para instalar todos los requerimientos. 
+Ingresar a la carpeta worker1 y ejecutar para instalar todos los requerimientos. 
+
 <code>bundle install 
 
 Para correr la aplicación y en caso de haber un problema lo repotara.
-
-Luego ejecutar el comando para crear la base de datos:
-
-<code>rake db:migrate<code> 
-	
 
 	
 Finalmente ejecute el siguiente comando para iniciar el worker:
@@ -103,12 +94,23 @@ Finalmente ejecute el siguiente comando para iniciar el worker:
 
 
 Los workers estan configurados en la aplicacion **Integrador**  en la carpeta config/ encontrara un archivo llamado
-workers.xml. Si desea iniciar los workers en otros puertos debe actualizar el archivo. Sino, solamente ingrese a la 
+workers.xml.
+
+<xml version='1.0'>
+<servidores>
+<servidor>http://localhost:2022/searchWS</servidor>
+<servidor>http://localhost:2020/searchWS</servidor>
+<servidor>http://localhost:8082/searchWS</servidor>
+</servidores>
+
+
+Si desea iniciar los workers en otros puertos debe actualizar el archivo. Sino, solamente ingrese a la 
 carpeta de workers y ejecute
 
 <code> rails s -p 2022
+<code> rails s -p 2020
+<code> rails s -p 8082
 
-si desea ejecutar mas, ingrese a la carpeta worker1 por terminal y ejecute el mismo comando con otro numero de puerto
 
 
 
